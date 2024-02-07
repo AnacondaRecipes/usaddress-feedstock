@@ -2,4 +2,4 @@ upload_channels:
   - sfe1ed40
 
 channels:
-  lp_test: snowflake
+    - https://staging.continuum.io/prefect/fs/probableparsing-feedstock/pr2/2b22ea7

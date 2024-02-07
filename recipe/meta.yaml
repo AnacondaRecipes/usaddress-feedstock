@@ -11,7 +11,7 @@ source:
   sha256: ef83b69900fe490510fff6aa7239eef1b6a4ea4d00482c73ed4e75096da20f72
 
 build:
-  number: 0
+  number: 1001
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - wheel
   run:
     - python
-    # requests is only used in a isolated script import_osm.py
+    # requests is only used in an isolated script import_osm.py
     # - requests
     - future >=0.14
     - python-crfsuite >=0.7
