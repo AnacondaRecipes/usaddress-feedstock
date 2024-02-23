@@ -44,7 +44,7 @@ test:
     # ignore test_labeling.py because it depends on test files and it's about performance,
     # and test_tagging.py because one must train the model (parserator train --trainfile FILES) 
     # to create the usaddr.crfsuite file before one can use the parse and tag methods
-    - pytest other/tests --ignore=other/tests/test_labeling.py --ignore=other/tests/test_tagging.py
+    - pytest other/tests --ignore=other/tests/test_labeling.py
 
 about:
   home: https://parserator.datamade.us/usaddress/
