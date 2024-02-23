@@ -7,11 +7,14 @@ package:
 
 source:
   # tests and license are not in the tarball on pypi
-  url: https://github.com/datamade/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: ef83b69900fe490510fff6aa7239eef1b6a4ea4d00482c73ed4e75096da20f72
+  - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+    sha256: 1a8ebf62d0cce58d7d8286dde70373c530a9317b6fe1752a4197b75b7d0870e3
+  - url: https://github.com/datamade/usaddress/archive/refs/tags/v0.5.10.tar.gz
+    sha256: ef83b69900fe490510fff6aa7239eef1b6a4ea4d00482c73ed4e75096da20f72
+    folder: other
 
 build:
-  number: 1001
+  number: 1002
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
 
 requirements:
@@ -29,25 +32,25 @@ requirements:
     - probableparsing
 
 test:
+  source_files:
+    - other/tests
   imports:
     - usaddress
   requires:
     - pip
     - pytest
-  source_files:
-    - tests
   commands:
     - pip check
     # ignore test_labeling.py because it depends on test files and it's about performance,
     # and test_tagging.py because one must train the model (parserator train --trainfile FILES) 
     # to create the usaddr.crfsuite file before one can use the parse and tag methods
-    - pytest tests --ignore tests/test_labeling.py --ignore=tests/test_tagging.py
+    - pytest other/tests --ignore=other/tests/test_labeling.py
 
 about:
   home: https://parserator.datamade.us/usaddress/
   license: MIT
   license_family: MIT
-  license_file: LICENSE
+  license_file: other/LICENSE
   summary: Parse US addresses using conditional random fields
   description: Parse US addresses using conditional random fields
   doc_url: https://usaddress.readthedocs.io
