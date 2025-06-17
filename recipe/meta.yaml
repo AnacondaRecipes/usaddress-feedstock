@@ -20,7 +20,6 @@ requirements:
     - pip
     - setuptools >=42
     - wheel
-    - probableparsing
     - parserator
   run:
     - python
