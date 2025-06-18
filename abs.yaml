@@ -1,7 +1,2 @@
 upload_channels:
   - sfe1ed40
-
-channels:
-  - https://staging.continuum.io/prefect/fs/parserator-feedstock/pr1/405dc42
-  - https://staging.continuum.io/prefect/fs/python-crfsuite-feedstock/pr4/980622a
-  - https://staging.continuum.io/prefect/fs/probableparsing-feedstock/pr3/b421a9a
