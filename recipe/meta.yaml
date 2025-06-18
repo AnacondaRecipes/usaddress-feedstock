@@ -45,7 +45,7 @@ test:
     - pytest -v tests
 
 about:
-  home: https://parserator.datamade.us/usaddress
+  home: https://github.com/datamade/usaddress
   license: MIT
   license_family: MIT
   license_file: LICENSE
