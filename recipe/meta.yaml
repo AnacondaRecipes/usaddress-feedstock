@@ -1,13 +1,13 @@
 {% set name = "usaddress" %}
-{% set version = "0.5.14" %}
+{% set version = "0.5.16" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   - url: https://github.com/datamade/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: a29b1bcaada285684948be1d1c19cf9ed7070284bb3ac0bb9a92531922d50982
+    sha256: a7c326c9924da984d69292f1c02e26330a36392ce6ddd3436f9624cbb954a3d5
 
 build:
   number: 0
